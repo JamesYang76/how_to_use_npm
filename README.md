@@ -38,4 +38,23 @@ $nvm use node
 # set default node version
 $nvm alias default v8.10.0
 ```
+## Usage
+All packages can be founded in https://www.npmjs.com/
 
+#### npm init
+To make package.json
+```bash
+# -y default config 
+$ npm init -y
+```
+#### npm install
+All packages is supposed to install in package.json.
+```bash
+$ npm install
+# Intall lodash package[version name] and add it into dependencies
+$ npm i lodash@4.17.4
+# The package will appear in  devDependencies
+$ npm install node-tap --save-dev
+# Install package globally,add it in ~/.nvm/versions/node/v8.10.0/bin/create-react-app
+$ npm install -g crate-react-app
+```
