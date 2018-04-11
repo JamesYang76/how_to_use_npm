@@ -48,13 +48,36 @@ To make package.json
 $ npm init -y
 ```
 #### npm install
-All packages is supposed to install in package.json.
+All packages in package.json is supposed to install into node_modules
 ```bash
 $ npm install
 # Intall lodash package[version name] and add it into dependencies
 $ npm i lodash@4.17.4
 # The package will appear in  devDependencies
 $ npm install node-tap --save-dev
-# Install package globally,add it in ~/.nvm/versions/node/v8.10.0/bin/create-react-app
+# Install package globally,add it in ~/.nvm/versions/node/v8.10.0/lib/node_modules/create-react-app
 $ npm install -g crate-react-app
 ```
+#### npm ls
+Show packlages installed
+```bash
+$ npm ls
+# for global
+$ npm ls -g
+```
+#### npm outdated
+Show outdated package
+```bash
+$ npm outdated
+# for global
+$ npm outdated -g
+```
+#### npm update
+Update all packages outdated
+```bash
+# according to package.json
+$ npm update
+$ npm install lodash@latest
+```
+
+
