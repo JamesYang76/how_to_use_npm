@@ -40,7 +40,7 @@ $nvm alias default v8.10.0
 ```
 ## Usage
 All packages can be founded in https://www.npmjs.com/
-
+### Command
 #### npm init
 To make package.json
 ```bash
@@ -51,8 +51,10 @@ $ npm init -y
 All packages in package.json is supposed to install into node_modules
 ```bash
 $ npm install
-# Intall lodash package[version name] and add it into dependencies
+# Install lodash package[version name] and add it into dependencies
 $ npm i lodash@4.17.4
+# Install lodash and react
+$ npm i lodash react
 # The package will appear in  devDependencies
 $ npm install node-tap --save-dev
 # Install package globally,add it in ~/.nvm/versions/node/v8.10.0/lib/node_modules/create-react-app
@@ -79,5 +81,47 @@ Update all packages outdated
 $ npm update
 $ npm install lodash@latest
 ```
+#### npm uninstall package
+Remove package form node_modues
+```bash
+$ npm uninstall lodash
+``` 
+### Script
+npm supports the "scripts" property of the package.json file,
+```javascript
+{
+  "name": "lookup-server",
+  "version": "0.0.1",
+  "private": true,
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  },
+  "dependencies": {
+    "babel-cli": "6.22.2",
+    "babel-core": "6.22.1",
+    "babel-preset-es2015": "6.22.0",
+    "babel-preset-stage-0": "6.22.0",
+  },
+  "scripts": {
+    "start": "npm run server",
+    "server": "babel-node start-server.js"
+  }
+}
 
+```
+```bash
+# pretest, test, posttest
+$ npm test
+prestop, stop, poststop
+$ npm stop
+prestart, start, poststart
+$ npm start 
+prerestart, restart, postrestart
+$ npm restart
+$ npm run server
+```
 
+Refer https://docs.npmjs.com/
