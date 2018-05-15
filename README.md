@@ -19,6 +19,8 @@ $curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | 
 $source ~/.bashrc
 $command -v nvm 
 ```
+If the above doesn't fix the problem, open your `~/.bash_profile` and add the following line of code:\
+`source ~/.bashrc`\
 Refer to https://github.com/creationix/nvm#install-script
 
 Last, install node
