@@ -62,6 +62,14 @@ $ npm install node-tap --save-dev
 # Install package globally,add it in ~/.nvm/versions/node/v8.10.0/lib/node_modules/create-react-app
 $ npm install -g crate-react-app
 ```
+#### npm ci
+`npm install` can change package-lock.json because of npm version, different platform or somthing.\
+`npm ci` has node_modules intalled by only using package-lock.json. package-lock.json and package.json is different, throw an erors\
+Required  npm 5.7.1 
+
+``` bash
+$ npm ci
+```
 #### npm ls
 Show packlages installed
 ```bash
