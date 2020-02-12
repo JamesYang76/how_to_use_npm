@@ -40,6 +40,8 @@ $nvm use node
 # set default node version
 $nvm alias default v8.10.0
 ```
+
+npm is installed with Node.js
 ## Usage
 All packages can be founded in https://www.npmjs.com/
 ### Command
